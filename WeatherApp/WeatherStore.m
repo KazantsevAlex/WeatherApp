@@ -31,6 +31,10 @@
     [self.store addObject: object];
 }
 
+- (void)clearSore{
+    [self.store removeAllObjects];
+}
+
 - (void) deleteObjectAtIndex:(NSUInteger)index {
     [self.store removeObjectAtIndex: index];
 }

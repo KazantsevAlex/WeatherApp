@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -10,34 +11,34 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="d1R-VE-H0T"/>
-                        <viewControllerLayoutGuide type="bottom" id="FND-Vg-f6n"/>
+                        <viewControllerLayoutGuide type="top" id="wS7-bU-DGC"/>
+                        <viewControllerLayoutGuide type="bottom" id="zkR-2N-DaZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UMB-gI-haG">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UMB-gI-haG">
                                 <rect key="frame" x="112" y="52" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hfz-wi-k2D">
-                                <rect key="frame" x="0.0" y="175" width="320" height="393"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hfz-wi-k2D">
+                                <rect key="frame" x="0.0" y="139" width="320" height="429"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WeatherTableViewCell" id="6gq-Vz-01h">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6gq-Vz-01h" id="TZE-fw-kJW">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mH-9A-d4f">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mH-9A-d4f">
                                 <rect key="frame" x="217" y="52" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -46,6 +47,17 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hfz-wi-k2D" firstAttribute="top" secondItem="UMB-gI-haG" secondAttribute="bottom" constant="57" id="1Fn-b2-F91"/>
+                            <constraint firstItem="UMB-gI-haG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="96" id="41G-26-UFQ"/>
+                            <constraint firstAttribute="trailing" secondItem="hfz-wi-k2D" secondAttribute="trailing" id="59f-46-9mM"/>
+                            <constraint firstItem="0mH-9A-d4f" firstAttribute="leading" secondItem="UMB-gI-haG" secondAttribute="trailing" constant="8" symbolic="YES" id="FEx-Qh-jHp"/>
+                            <constraint firstItem="UMB-gI-haG" firstAttribute="top" secondItem="wS7-bU-DGC" secondAttribute="bottom" constant="32" id="SjQ-OP-e3J"/>
+                            <constraint firstItem="hfz-wi-k2D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cvH-aH-ef7"/>
+                            <constraint firstItem="hfz-wi-k2D" firstAttribute="bottom" secondItem="zkR-2N-DaZ" secondAttribute="top" id="ogT-va-aWm"/>
+                            <constraint firstItem="hfz-wi-k2D" firstAttribute="centerX" secondItem="UMB-gI-haG" secondAttribute="centerX" id="qd1-fl-N1c"/>
+                            <constraint firstItem="UMB-gI-haG" firstAttribute="top" secondItem="0mH-9A-d4f" secondAttribute="top" id="sP8-wu-v91"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="doMagic" destination="0mH-9A-d4f" id="tcK-3C-BY7"/>
