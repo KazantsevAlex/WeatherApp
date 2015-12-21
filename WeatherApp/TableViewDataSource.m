@@ -26,8 +26,8 @@
     return self;
 }
 
-- (void)configure:(UITableView *)tableView
-{
+- (void)configure:(UITableView *)tableView {
+    
     tableView.dataSource  = self;
     tableView.delegate = self;
     
@@ -45,13 +45,11 @@
           withHumidity:[self.store showObjectAtindex:indexPath.row].weatherHumidity
          withWindSpeed:[self.store showObjectAtindex:indexPath.row].weatherWindSpeed];
     
-    
     return cell;
 }
 
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 100.f;
 }
 
@@ -66,17 +64,15 @@
     return YES;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete)
-    {
-//        [self.store removeObjectAtIndex:indexPath.row];
-        //[tableView reloadData];
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        [self.store deleteObjectAtIndex:indexPath.row];
+        [tableView reloadData];
     }
     
 }
-
-
 
 
 

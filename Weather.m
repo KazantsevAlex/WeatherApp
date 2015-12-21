@@ -23,7 +23,7 @@
 
 @implementation Weather
 
-- (instancetype)initWithDictionary:(id )object{
+- (instancetype)initWithDictionary:(id )object {
     
     NSParameterAssert(object);
     if (self = [super init]) {
@@ -35,7 +35,7 @@
     return self;
 }
 
--(void)initValues:(id )object{
+-(void)initValues:(id )object {
     
     self.dictionary = [[NSDictionary alloc]initWithDictionary:object];
     self.dictionaryWeather = [self.dictionary valueForKey:@"weather"];

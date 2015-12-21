@@ -16,6 +16,5 @@
 - (void) deleteObjectAtIndex:(NSUInteger)index;
 - (NSUInteger) objectsCount;
 -(Weather *)showObjectAtindex:(NSUInteger)index;
-- (void)clearSore;
 
 @end

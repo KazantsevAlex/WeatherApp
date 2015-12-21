@@ -25,8 +25,7 @@
     return self;
 }
 
-- (void)getReporsSuccess:(void(^)(id objects))successBlock
-{
+- (void)getReporsSuccess:(void(^)(id objects))successBlock {
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?q=%@&units=metric&mode=json&appid=2de143494c0b295cca9337e1e96b00e0",self.townName]];
@@ -42,7 +41,7 @@
     [task resume];
 }
 
--(void)setTown:(NSString *)townName{
+-(void)setTown:(NSString *)townName {
     self.townName = townName;
 }
 

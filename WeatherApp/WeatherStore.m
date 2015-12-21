@@ -18,8 +18,7 @@
 
 @implementation WeatherStore
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         self.store = [NSMutableArray new];
@@ -29,10 +28,6 @@
 
 - (void) addObject:(Weather *)object {
     [self.store addObject: object];
-}
-
-- (void)clearSore{
-    [self.store removeAllObjects];
 }
 
 - (void) deleteObjectAtIndex:(NSUInteger)index {

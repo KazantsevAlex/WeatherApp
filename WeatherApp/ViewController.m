@@ -22,17 +22,24 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
-
     self.dataSource =[TableViewDataSource new];
     self.store = [WeatherStore new];
     self.data = [GetData new];
     [self configureTableView];
+    
+    self.doMagic.backgroundColor = [UIColor purpleColor];
+    self.doMagic.layer.cornerRadius = 10;
+    self.doMagic.clipsToBounds = YES;
+    
+    self.townTextField.backgroundColor = [UIColor colorWithRed:190.f/255 green:255.f/255 blue:255.f/255 alpha:1];
+
 }
 
 - (IBAction)doMagic:(id)sender {
-//    [self.store clearSore];
+    
     [self.data setTown:self.townTextField.text];
     [self.data getReporsSuccess:^(id objects) {
         
@@ -50,16 +57,14 @@
         
     }];
     [self configureTableView];
-
 }
 
 
--(void)configureTableView{
-
+-(void)configureTableView {
+    
     self.dataSource = [[TableViewDataSource alloc]initWithTableView:self.tableView withStore:self.store];
-//    [self.tableView reloadData];
+    
 }
-
 
 
 @end

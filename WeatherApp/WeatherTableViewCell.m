@@ -30,10 +30,25 @@
 - (void)fillCellWith:(NSString *)town withTemperature: (NSUInteger)temperature withHumidity: (NSUInteger)humidity withWindSpeed: (NSUInteger)windSpeed {
     
     self.townNameLabel.text = town;
-    self.temperatureLabel.text = [NSString stringWithFormat:@"%lu",temperature];
-    self.humidityLabel.text = [NSString stringWithFormat:@"%lu",humidity];
-    self.windSpeedLabel.text = [NSString stringWithFormat:@"%lu",windSpeed];
- 
+    self.temperatureLabel.text = [NSString stringWithFormat:@"Temperature: %lu degrees",temperature];
+    self.humidityLabel.text = [NSString stringWithFormat:@"Humidity: %lu%%",humidity];
+    self.windSpeedLabel.text = [NSString stringWithFormat:@"Wind speed: %lu m/s",windSpeed];
+    
+    self.windSpeedLabel.backgroundColor = [UIColor yellowColor];
+    self.windSpeedLabel.layer.cornerRadius = 10;
+    self.windSpeedLabel.clipsToBounds = YES;
+    
+    self.temperatureLabel.backgroundColor = [UIColor yellowColor];
+    self.temperatureLabel.layer.cornerRadius = 10;
+    self.temperatureLabel.clipsToBounds = YES;
+    
+    self.humidityLabel.backgroundColor = [UIColor yellowColor];
+    self.humidityLabel.layer.cornerRadius = 10;
+    self.humidityLabel.clipsToBounds = YES;
+    
+    self.townNameLabel.backgroundColor = [UIColor yellowColor];
+    self.townNameLabel.layer.cornerRadius = 10;
+    self.townNameLabel.clipsToBounds = YES;
     
 }
 

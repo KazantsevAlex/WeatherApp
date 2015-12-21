@@ -19,19 +19,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UMB-gI-haG">
-                                <rect key="frame" x="112" y="52" width="97" height="30"/>
+                                <rect key="frame" x="53" y="28" width="215" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hfz-wi-k2D">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hfz-wi-k2D">
                                 <rect key="frame" x="0.0" y="139" width="320" height="429"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WeatherTableViewCell" id="6gq-Vz-01h">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WeatherTableViewCell" rowHeight="100" id="6gq-Vz-01h">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6gq-Vz-01h" id="TZE-fw-kJW">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -39,24 +40,28 @@
                                 <sections/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mH-9A-d4f">
-                                <rect key="frame" x="217" y="52" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="110" y="66" width="100" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="doMagic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s41-PF-fRb"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="hfz-wi-k2D" firstAttribute="top" secondItem="UMB-gI-haG" secondAttribute="bottom" constant="57" id="1Fn-b2-F91"/>
-                            <constraint firstItem="UMB-gI-haG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="96" id="41G-26-UFQ"/>
-                            <constraint firstAttribute="trailing" secondItem="hfz-wi-k2D" secondAttribute="trailing" id="59f-46-9mM"/>
-                            <constraint firstItem="0mH-9A-d4f" firstAttribute="leading" secondItem="UMB-gI-haG" secondAttribute="trailing" constant="8" symbolic="YES" id="FEx-Qh-jHp"/>
-                            <constraint firstItem="UMB-gI-haG" firstAttribute="top" secondItem="wS7-bU-DGC" secondAttribute="bottom" constant="32" id="SjQ-OP-e3J"/>
-                            <constraint firstItem="hfz-wi-k2D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cvH-aH-ef7"/>
-                            <constraint firstItem="hfz-wi-k2D" firstAttribute="bottom" secondItem="zkR-2N-DaZ" secondAttribute="top" id="ogT-va-aWm"/>
-                            <constraint firstItem="hfz-wi-k2D" firstAttribute="centerX" secondItem="UMB-gI-haG" secondAttribute="centerX" id="qd1-fl-N1c"/>
-                            <constraint firstItem="UMB-gI-haG" firstAttribute="top" secondItem="0mH-9A-d4f" secondAttribute="top" id="sP8-wu-v91"/>
+                            <constraint firstItem="0mH-9A-d4f" firstAttribute="top" secondItem="UMB-gI-haG" secondAttribute="bottom" constant="8" symbolic="YES" id="KaW-Vi-BYW"/>
+                            <constraint firstItem="0mH-9A-d4f" firstAttribute="centerX" secondItem="UMB-gI-haG" secondAttribute="centerX" id="PRz-p2-3WK"/>
+                            <constraint firstItem="hfz-wi-k2D" firstAttribute="bottom" secondItem="zkR-2N-DaZ" secondAttribute="top" id="Vjm-pB-Xa1"/>
+                            <constraint firstItem="hfz-wi-k2D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="csS-qH-fip"/>
+                            <constraint firstAttribute="trailing" secondItem="hfz-wi-k2D" secondAttribute="trailing" id="ffL-u5-MV2"/>
+                            <constraint firstItem="hfz-wi-k2D" firstAttribute="top" secondItem="0mH-9A-d4f" secondAttribute="bottom" constant="43" id="iDp-qs-ePe"/>
+                            <constraint firstItem="UMB-gI-haG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="37" id="lbO-Uh-UzE"/>
+                            <constraint firstItem="0mH-9A-d4f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="94" id="ntg-NL-p19"/>
+                            <constraint firstItem="hfz-wi-k2D" firstAttribute="centerX" secondItem="0mH-9A-d4f" secondAttribute="centerX" id="xAJ-ml-bKy"/>
+                            <constraint firstItem="UMB-gI-haG" firstAttribute="top" secondItem="wS7-bU-DGC" secondAttribute="bottom" constant="8" symbolic="YES" id="yFE-tM-gU7"/>
                         </constraints>
                     </view>
                     <connections>
